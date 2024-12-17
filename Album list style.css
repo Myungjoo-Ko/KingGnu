@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/texture\ 3\ 3.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.crown {
+  text-align: center;
+}
+.album {
+  text-align: center;
+}
+.crown-img {
+  width: 15%;
+  margin-top: 20px;
+  vertical-align: center;
+}
+
+.album-img1 {
+  width: 40%;
+  margin-top: 5px;
+  margin-bottom: 20px;
+}
+@media (min-width: 1279px) {
+  .album-img1 {
+    width: 520px; /* 원하는 고정 크기 (px 단위) */
+  }
+}
+@media (min-width: 1279px) {
+  .crown-img {
+    width: 220px; /* 원하는 고정 크기 (px 단위) */
+  }
+}
+@media (max-width: 1080px) {
+  .album-img1 {
+    width: 400px; /* 원하는 고정 크기 (px 단위) */
+    align-items: center; /* 중앙 정렬 유지 */
+  }
+  .crown-img {
+    width: 170px; /* 고정된 크기 유지 */
+    height: auto; /* 비율 유지 */
+    align-items: center; /* 중앙 정렬 유지 */
+  }
+}
+
+.album-image {
+  display: flex;
+  gap: 6px;
+  position: relative;
+  flex-wrap: wrap;
+  align-content: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.album-image a {
+  flex: 0 1 auto;
+  width: 34%;
+  height: auto;
+}
+.album-image img {
+  width: 100%; /* 기본 이미지 크기 */
+  height: auto; /* 비율 유지 */
+}
+/* 각각의 링크 위치 설정 */
+a.p-link {
+  top: 590px; /* 화면 높이의 10% */
+  /* left: 45%;  */
+}
+
+a.white-link {
+  top: 63vh;
+  /* left: 9%; */
+}
+
+a.un-link {
+  top: 85vh;
+  /* left: 48%; */
+}
+
+a.sym-link {
+  top: 100vh;
+  /* left: 8%; */
+}
+
+a.-link {
+  top: 117vh;
+  /* left: 48%; */
+}
+
+a.sp-link {
+  top: 148vh;
+  /* left: 17%; */
+}
+
+@media (max-width: 1080px) {
+  .album-image {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    gap: 0px; /* 이미지 간 간격 */
+  }
+}
