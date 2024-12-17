@@ -1,0 +1,65 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  background-image: url(img/texture\ 3\ 3.png);
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.crown {
+  width: 15vw;
+  margin-top: 20px;
+  vertical-align: center;
+  margin-bottom: -15px;
+}
+
+.svg-container {
+  display: flex; /* 플렉스박스 사용 */
+  justify-content: center; /* 수평 중앙 정렬 */
+  align-items: center; /* 수직 중앙 정렬 */
+  position: absolute; /* 필요에 따라 위치 지정 */
+  width: 100%; /* 컨테이너 너비 */
+  height: 100vh; /* 화면 전체 높이 */
+}
+
+.svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: none; /* 기본적으로 숨김 */
+}
+
+.svg.visible {
+  display: block; /* 보이는 SVG */
+}
+
+/* .svg-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+} */
+/* .svg-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+/* .svg {
+  width: 90%;
+  margin-top: 10px;
+} */
+
+.text {
+  font-family: "Roboto";
+  font-style: normal;
+  color: #ffffff;
+  padding: 1vw;
+  text-align: center; /* 텍스트 수평 중앙 정렬 */
+  letter-spacing: 5px; /* 자간 수정 (기본값보다 늘림) */
+  font-size: 3vw; /* 기본 폰트 크기 */
+  word-spacing: 4vw;
+}

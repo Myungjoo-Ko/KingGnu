@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>King Gnu</title>
+    <link rel="stylesheet" href="Kinggnu style.css" />
+  </head>
+
+  <body>
+    <div class="text">
+      JAPAN <img src="img/main.crownwh.png" alt="crown" class="crown" />
+      MADE
+    </div>
+    <div class="svg-container">
+      <a href="Album list.html" class="svg-link">
+        <img src="img/kinggnu1.svg" alt="Initial SVG" class="svg visible" />
+        <img src="img/kinggnu2.svg" alt="Second SVG" class="svg" />
+        <img src="img/kinggnu3.svg" alt="Third SVG" class="svg" />
+        <img src="img/kinggnu4.svg" alt="Fourth SVG" class="svg" />
+        <img src="img/kinggnu5.svg" alt="Fifth SVG" class="svg" />
+        <img src="img/kinggnu6.svg" alt="Sixth SVG" class="svg" />
+        <img src="img/kinggnu7.svg" alt="Seventh SVG" class="svg" />
+        <img src="img/kinggnu8.svg" alt="Eighth SVG" class="svg" />
+        <img src="img/kinggnu9.svg" alt="Ninth SVG" class="svg" />
+      </a>
+    </div>
+    <!-- <div class="svg-wrapper">
+      <img src="img/kinggnu1.svg" alt="SVG 1" class="svg" />
+    </div> -->
+    <script>
+      const svgContainer = document.querySelector(".svg-container");
+      const svgs = document.querySelectorAll(".svg");
+      let hoverInterval = null; // 호버 상태에서 반복될 타이머
+      let currentIndex = 0; // 현재 보이는 SVG의 인덱스
+
+      // 마우스 호버 핸들러
+      svgContainer.addEventListener("mouseenter", () => {
+        // 다른 SVG들을 순서대로 보여주는 애니메이션
+        hoverInterval = setInterval(() => {
+          svgs[currentIndex].classList.remove("visible"); // 현재 SVG 숨김
+          currentIndex = (currentIndex + 1) % svgs.length; // 다음 SVG로 이동
+          svgs[currentIndex].classList.add("visible"); // 다음 SVG 표시
+        }, 550); // 1초 간격으로 SVG 교체
+
+        // 첫 번째 SVG를 즉시 교체
+        svgs[currentIndex].classList.remove("visible"); // 첫 번째 SVG 숨김
+        currentIndex = 1; // 두 번째 SVG로 바로 이동
+        svgs[currentIndex].classList.add("visible"); // 두 번째 SVG 표시
+      });
+
+      // 마우스 떠남 핸들러
+      svgContainer.addEventListener("mouseleave", () => {
+        clearInterval(hoverInterval); // 애니메이션 멈춤
+        svgs[currentIndex].classList.remove("visible"); // 현재 SVG 숨김
+        currentIndex = 0; // 첫 번째 SVG로 돌아감
+        svgs[currentIndex].classList.add("visible"); // 첫 번째 SVG 표시
+      });
+    </script>
+  </body>
+</html>
